@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Compras</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <!-- FONT -->
@@ -24,7 +28,14 @@
         </div>
         <div class="input-group">
           <label for="preco">Preço:</label>
-          <input type="number" id="preco" step="0.01" required />
+          <input
+            type="number"
+            id="preco"
+            step="0.01"
+            inputmode="decimal"
+            pattern="[0-9]*[.,]?[0-9]+"
+            required
+          />
         </div>
         <div class="input-group">
           <label for="quantidade">Quantidade:</label>

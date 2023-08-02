@@ -16,15 +16,22 @@ document.addEventListener('DOMContentLoaded', function () {
       total += subtotal
 
       const listItem = document.createElement('li')
-      listItem.innerHTML = `${descricao} - R$ ${preco.toFixed(
+      listItem.innerHTML = `
+              ${descricao} - R$ ${preco.toFixed(
         2
-      )} x ${quantidade} = R$ ${subtotal.toFixed(2)}`
-      listItem.setAttribute('data-index', index) // Adiciona um atributo para identificar o item
+      )} x ${quantidade} = R$ ${subtotal.toFixed(2)}
+              <span class="remove-icon" data-index="${index}"><i class="fas fa-times"></i></span>
+          `
       itemList.appendChild(listItem)
-      listItem.addEventListener('click', removeItem)
     })
 
     totalElement.textContent = `Total: R$ ${total.toFixed(2)}`
+
+    // Adiciona o evento de clique para o ícone de remoção
+    const removeIcons = document.querySelectorAll('.remove-icon')
+    removeIcons.forEach(icon => {
+      icon.addEventListener('click', removeItem)
+    })
   }
 
   // Função para remover um item da lista
