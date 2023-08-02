@@ -39,7 +39,14 @@
         </div>
         <div class="input-group">
           <label for="quantidade">Quantidade:</label>
-          <input class="" type="number" id="quantidade" required />
+          <input
+            class=""
+            type="number"
+            id="quantidade"
+            inputmode="decimal"
+            pattern="[0-9]*[.,]?[0-9]+"
+            required
+          />
         </div>
         <div class="pt-5">
           <button
