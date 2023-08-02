@@ -34,7 +34,7 @@ label {
 input[type='text'],
 input[type='number'] {
   width: 100%;
-  padding: 2px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
